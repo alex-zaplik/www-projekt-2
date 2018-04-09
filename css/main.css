@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+}
+
+html {
+    overflow-y: auto;
+}
+
+body {
+    padding: 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+h4, h5, h6 {
+    font-size: 1em;
+}
+
+p {
+    margin: 1em 0;
+}
+
+ul {
+    list-style: disc;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    padding: 0;
+
+    background: #e8ecf1;
+}
+
+header {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+
+    padding: 2.5em;
+
+    text-align: center;
+    color: #fff;
+    background: #28456b;
+
+    box-shadow: 0 0.15em 0 0 rgba(0,0,0,0.3);
+}
+
+.description {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+
+    padding: 1em;
+    padding-top: 0;
+
+    color: #000;
+}
+
+.description > h3, h3.card-title {
+    color: #4b4b5a;
+    font-size: 1.5em;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-top: 1rem;
+}
+
+.subjects, .hobbies {
+    margin: 0;
+    padding: 0;
+}
+
+.subjects {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.hobbies {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+
+.sub-header {
+    display: block;
+
+    margin: 0;
+    margin-bottom: 0.2em;
+    padding: 0.6em;
+    padding-left: 1em;
+
+    background: #41618a;
+
+    box-shadow: 0 0.15em 0 0 rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.sub-header > h2 {
+    margin: 0;
+
+    color: #fff;
+}
+
+header > h1, header > h2, header > h3 {
+    margin: 0;
+    padding: 0;
+}
+
+header > h3 {
+    margin-top: 0.4em;
+}
+
+header > h1 {
+    font-size: 2.5em;
+}
+
+.sub-list ul {
+    display: block;
+
+    padding: 0;
+    margin: 0;
+}
+
+.sub-list li {
+    list-style: none;
+}
+
+.sub-list li:hover {
+    background: #fff;
+    transition: background-color 0.3s ease-out;
+}
+
+.sub-list a {
+    display: block;
+
+    padding: 0.6em 1em;
+
+    color: inherit;
+    text-decoration: none;
+    color: #026BA6;
+}
+
+.sub-list a:hover {
+    color: #013654;
+    transition: color 0.3s ease-out;
+}
+
+#photo {
+    display: block;
+    float: right;
+    margin: 1rem 0 1rem 1rem;
+
+    width: 10em;
+    height: 10em;
+
+    border-radius: 0.3em;
+}
+
+@media screen and (max-width: 550px) {
+    #photo {
+        display: none;
+    }
+}
+
+h3.card-title {
+    text-align: left;
+    margin: 1rem;
+
+    grid-column: 1 / span 2;
+}
+
+.card {
+    grid-column: 1 / span 2;
+
+    border-radius: 0.2em;
+    overflow: hidden;
+    margin: 0rem 1rem;
+
+    background: #fff;
+}
+
+.card.left {
+    margin-bottom: 1rem;
+}
+
+.card > h4, .card > h5 {
+    display: block;
+
+    width: 100%;
+    margin: 0;
+    padding: 0.6em 0.8em;
+
+    color: white;
+    font-size: 1em;
+}
+
+.card > h4 {
+    background: #41618a;
+}
+
+.card > h5 {
+    background: #6a8bb5;
+    font-weight: normal;
+}
+
+.card.right > h4 {
+    background: #906951;
+}
+
+.card > div {
+    padding: 0.8em;
+}
+
+.card > div > p {
+    margin: 0;
+}
+
+.card > div > ul {
+    -webkit-padding-start: 0;
+    padding-left: 1em;
+    margin: 0;
+}
+
+.card.single {
+    margin-top: 1em;
+}
+
+.button-wrapper {
+    grid-column: 2;
+}
+
+.back-button {
+    float: right;
+
+    border-radius: 0.2em;
+    overflow: hidden;
+
+    width: 8em;
+    padding: 0.5em;
+    margin: 1em;
+
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: #41618a;
+}
+
+.back-button::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.back-button:hover {
+    background: #8694a7;
+    transition: background-color 0.2s ease-out;
+}
+
+.fancy-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+@media screen and (min-width: 800px) {
+    .subjects {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .hobbies {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .hobbies > .sub-header {
+        border-left: 1px solid #3a5271;
+    }
+
+    .hobbies > .sub-list ul {
+        border-left: 1px solid;
+        border-image:  linear-gradient(#cedef3, #e8ecf1) 1 100%;
+    }
+
+    .card.left {
+        margin-bottom: 0;
+    }
+
+    .card.left {
+        grid-column: 1;
+
+        margin-right: 0.5em;
+    }
+
+    .card.right {
+        grid-column: 2;
+
+        margin-left: 0.5em;
+    }
+}
