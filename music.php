@@ -1,6 +1,10 @@
 <?php
     require_once("main.php");
     $P = new Page(1,"Muzyka", "Muzyka");
+
+    $P->AddCss("reset");
+    $P->AddCss("main");
+    
     echo $P->Begin();
 
     $Card = new HobbyCard();

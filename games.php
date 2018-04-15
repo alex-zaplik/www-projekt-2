@@ -1,6 +1,10 @@
 <?php
     require_once("main.php");
     $P = new Page(1,"Gry", "Projektowanie gier");
+
+    $P->AddCss("reset");
+    $P->AddCss("main");
+
     echo $P->Begin();
 
     $Card = new HobbyCard();

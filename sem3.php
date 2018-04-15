@@ -1,6 +1,10 @@
 <?php
     require_once("main.php");
     $P = new Page(1,"Semestr 3 (2017/18)", "Semestr 3 (2017/18)");
+
+    $P->AddCss("reset");
+    $P->AddCss("main");
+    
     echo $P->Begin();
 
     $Card = new SubjectCard();
