@@ -281,4 +281,20 @@ class Page {
         return $BOTTOM;
     }
 }
+
+class ExecutionTime
+{
+     private $startTime;
+     private $endTime;
+
+     public function start(){
+         $this->startTime = microtime(true);
+     }
+     public function stop(){
+         $this->endTime =  microtime(true);
+     }
+     public function diff(){
+         return $this->endTime - $this->startTime;
+     }
+}
 ?>

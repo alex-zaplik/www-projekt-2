@@ -1,5 +1,9 @@
 <?php
     require_once("main.php");
+
+    $timer = new ExecutionTime();
+    $timer->start(); 
+
     $P = new Page(1,"Strona główna", false);
 
     $P->AddCss("reset");
@@ -18,6 +22,9 @@
             <p>
                 W sumie to na razie tyle. Może za parę lat będzie więcej do napisania (Chyba, że nadal będę walczył z
                 Językami Formalnymi i Teorią Translacji).
+            </p>
+            <p>
+                Czas wykonania:  <?php $timer->stop(); echo $timer->diff(); ?>  ms
             </p>
         </article>
 <?php
